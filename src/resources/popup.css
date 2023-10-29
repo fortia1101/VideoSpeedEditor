@@ -1,0 +1,61 @@
+:root {
+    --body-width: 200px;
+    --body-height: 100px;
+    --header-height: 26px;
+    --border-color: linear-gradient(45deg, rgb(255, 200, 110), rgb(200, 45, 45));
+}
+
+body {
+    width: var(--body-width);
+    height: var(--body-height);
+    background-color: rgb(39, 39, 51);
+    margin: 0;
+}
+
+header {
+    background-color: rgb(56, 56, 66);
+    border-bottom: solid 1px rgb(20, 20, 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 26px;
+}
+
+header h1 {
+    font-weight: normal;
+    color: rgb(230, 230, 230);
+    font-size: 0.8rem;
+}
+
+main {
+    margin: 0px 12px;
+}
+
+.select-area {
+    height: calc(var(--body-height) - var(--header-height));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.select-area label {
+    font-weight: normal;
+    color: rgb(230, 230, 230);
+    font-size: 1rem;
+}
+
+.select-area select {
+    width: calc(var(--body-width) / 1.8);
+    height: 24px;
+    border: solid 2px rgb(60, 200, 255);
+    border-radius: 10px;
+    background-color: rgb(230, 230, 230);
+    padding: 0px 5px;
+}
+
+.video-deactive p {
+    font-weight: normal;
+    color: rgb(230, 230, 230);
+    font-size: 1rem;
+    text-align: center;
+}

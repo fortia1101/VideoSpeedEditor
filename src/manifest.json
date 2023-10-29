@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "VideoSpeedEditor",
+    "version": "1.0.0",
+
+    "action": {
+        "default_icon": {
+            "19": "icon/logo-19.png"
+        },
+        "default_popup": "./resources/popup.html"
+    },
+    "description": "An extention for editing play speed of video.",
+    "icons": {
+        "16": "icon/logo-16.png",
+        "48": "icon/logo-48.png",
+        "128": "icon/logo-128.png"
+    },
+
+    "author": "team901.ad@gmail.com",
+    "permissions": ["activeTab", "scripting", "storage"]
+}
