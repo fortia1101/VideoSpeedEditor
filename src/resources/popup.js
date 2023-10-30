@@ -16,7 +16,9 @@ window.addEventListener("DOMContentLoaded", async () => {
                     document.querySelector(".video-active").style.display = "block";
                     document.querySelector(".video-deactive").style.display = "none";
                 }
-                document.getElementById("speed-select").querySelector(`option[value='${result[1]}']`).selected = true;
+                document
+                    .getElementById("speed-select")
+                    .querySelector(`option[value='${result[1]}']`).selected = true;
             }
         });
 });
@@ -34,11 +36,11 @@ speedSelector.addEventListener("change", async () => {
 // Handle Current Page
 function getNowPlaySpeed() {
     let videoElements = document.getElementsByTagName("video");
-    let nowSpeed = 1.0;
+    let nowSpeed = 1;
     try {
         nowSpeed = videoElements[0].playbackRate;
     } catch {
-        nowSpeed = 1.0;
+        nowSpeed = 1;
     }
     for (let i = 1; i < videoElements.length; i++) {
         videoElements[i].playbackRate = nowSpeed;
