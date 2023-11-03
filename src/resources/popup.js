@@ -16,9 +16,7 @@ window.addEventListener("DOMContentLoaded", async () => {
                     document.querySelector(".video-active").style.display = "block";
                     document.querySelector(".video-deactive").style.display = "none";
                 }
-                document
-                    .getElementById("speed-select")
-                    .querySelector(`option[value='${result[1]}']`).selected = true;
+                document.getElementById("speed-select").querySelector(`option[value='${result[1]}']`).selected = true;
             }
         });
 });
@@ -42,8 +40,10 @@ function getNowPlaySpeed() {
     } catch {
         nowSpeed = 1;
     }
-    for (let i = 1; i < videoElements.length; i++) {
-        videoElements[i].playbackRate = nowSpeed;
+    if (videoElements.length > 0) {
+        for (let i = 1; i < videoElements.length; i++) {
+            videoElements[i].playbackRate = nowSpeed;
+        }
     }
     return [videoElements.length, nowSpeed];
 }
